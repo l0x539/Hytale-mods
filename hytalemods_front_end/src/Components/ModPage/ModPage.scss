@@ -1,0 +1,474 @@
+@import '../../scss/partials/colors';
+@import '../../scss/partials/bigButton';
+
+// Mod Page
+.mod-page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(32, 32, 48);
+  background: linear-gradient(0deg, rgba(32, 32, 48, 1) 0%, rgba(43, 43, 64, 1) 100%);
+}
+
+.mod-page__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100rem;
+  min-height: 100vh;
+  height: 100%;
+  background: $dark;
+  padding: 2rem;
+  border-left: 1px solid $highlight;
+  border-right: 1px solid $highlight;
+  padding: 2rem;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+// Mod Header 
+.mod-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6.5rem;
+  margin-bottom: 2rem;
+}
+
+.banner__title {
+  font-size: 4rem;
+}
+
+.banner__button {
+  width: 32rem;
+  height: auto;
+}
+
+.big-button-wrap--dl {
+  @extend .big-button-wrap;
+  margin: 0;
+}
+
+.big-button--dl {
+  @extend .big-button;
+}
+
+// Mod Info
+.mod-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 43rem;
+}
+
+// Images Carousel
+.mod__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 62rem;
+  height: auto;
+  background: $dark-shade;
+  border-radius: 0.5rem;
+  z-index: 3;
+}
+
+.gallery-top {
+  width: 100%;
+  height: 79%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  background: url(../../images/hytale-mod.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top .swiper-slide {
+  width: 100%;
+  min-height: 100%;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+// Stats
+.mod-stats {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  height: auto;
+  padding: 1.5rem;
+  background: $dark-shade;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.mod-card__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-card {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+}
+
+.mod-card__image {
+  width: 5rem;
+  height: 5rem;
+  background: $dark;
+  margin-right: 1rem;
+}
+
+.mc__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.mod-card__name {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  &--primary {
+    @extend .mod-card__name;
+    color: $primary-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.sub__button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $offwhite;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ms-dates__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.ms-dates__date {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.ms-stat__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 14rem;
+}
+
+.ms-stat__stat {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  &--primary {
+    @extend .ms-stat__stat;
+    color: $primary-color;
+  }
+}
+
+// Mod Details
+.mod-content {
+  width: 100%;
+  height: 100%;
+  background: $dark-shade;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.mod-details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 25px
+}
+
+.md__text {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.md__image {
+  width: 100%;
+  height: auto;
+}
+
+// Tag Section
+.linebreak {
+  width: 100%;
+  height: 0.1rem;
+  background: $highlight;
+  border: none;
+  margin: 1.5rem 0;
+}
+
+.mod-tags {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.mod-tags__title {
+  align-self: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.mod-tags__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.mod-tags__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  // No Select
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  transition: all 0.2s ease-out;
+  /* Likely future */
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Mod Comments
+
+// Media Queries
+@media only screen and (max-width: 1000px) {
+  .mod-page__container {
+    width: 100%;
+  }
+
+  .banner {
+    height: 5rem;
+  }
+
+  .banner__title {
+    font-size: 3rem;
+  }
+
+  .big-button-wrap--dl {
+    height: 4.5rem;
+  }
+
+  .banner__button {
+    width: 20rem;
+  }
+
+  .mod-info {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    height: auto;
+  }
+
+  .mod__images {
+    height: 55rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  // .mod-card__wrap {}
+
+  .mod-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .ms-stat__wrap {
+    width: auto;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .mod__images {
+    height: 50rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .banner__title {
+    font-size: 2.5rem;
+  }
+
+  .mod__images {
+    height: 45rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner__button {
+    width: 15rem;
+  }
+
+  .big-button--dl {
+    font-size: 1.4rem;
+  }
+
+  .big-button-wrap--dl {
+    height: 4rem;
+  }
+
+  .mod__images {
+    height: 40rem;
+  }
+
+  .mod-stats {
+    height: auto;
+  }
+
+  .ms-dates__wrap {
+    margin: 1rem 0;
+  }
+
+  .ms-stat__stat {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner__title {
+    font-size: 2rem;
+  }
+
+  .mod__images {
+    height: 35rem;
+  }
+
+  .mod-card__name {
+    font-size: 1.5rem;
+  }
+
+  .ms-dates__wrap {
+    margin: 0.5rem 0;
+  }
+
+  .ms-stat__stat {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mod-stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mod-card__name {
+    font-size: 1.6rem;
+  }
+
+  .ms-dates__wrap {
+    margin: 1.5rem 0;
+  }
+
+  .ms-stat__stat {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .banner {
+    height: 3rem;
+  }
+
+  .banner__title {
+    font-size: 1.6rem;
+  }
+
+  .banner__button {
+    width: 12rem;
+  }
+
+  .big-button--dl {
+    font-size: 1.2rem;
+  }
+
+  .big-button-wrap--dl {
+    height: 3.5rem;
+  }
+
+  .mod__images {
+    height: 25rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+
+  .banner__button {
+    width: 8rem;
+  }
+
+  .big-button--dl {
+    font-size: 1rem;
+  }
+
+  .big-button-wrap--dl {
+    height: 2.5rem;
+  }
+
+  .mod__images {
+    height: 20rem;
+  }
+}

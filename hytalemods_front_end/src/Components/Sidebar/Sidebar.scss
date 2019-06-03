@@ -1,0 +1,70 @@
+@import '../../scss/partials/colors';
+@import '../../scss/partials/mixins';
+
+// Sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $dark;
+  min-width: 22.5rem;
+  min-height: 100%;
+  border-right: 1px solid $highlight;
+  margin-top: 5rem;
+  padding: 4.5rem 3rem;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.side-filter {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.side-filter__title {
+  font-size: 1.8rem;
+}
+
+.category__item {
+  display: flex;
+  align-items: center;
+  line-height: 2rem;
+}
+
+.side-filter__checkbox {
+  margin-right: 0.5rem;
+}
+
+.side-filter__item {
+  font-size: 1.4rem;
+  font-weight: bold;
+  list-style: none;
+  color: rgba($offwhite, 0.65);
+  margin: 0.25rem 0;
+  cursor: pointer;
+  @include user-select(none);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--active {
+    @extend .side-filter__item;
+    color: rgba($offwhite, 1);
+    text-shadow: 0 0.01rem 0.2rem $offwhite;
+  }
+}
+
+.side-filter__checkbox:checked+.side-filter__item {
+  color: $offwhite;
+}
+
+// Media Queries
+@media only screen and (max-width: 850px) {
+  .sidebar {
+    display: none;
+  }
+}

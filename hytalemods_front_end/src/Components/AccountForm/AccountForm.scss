@@ -1,0 +1,149 @@
+@import '../../scss/partials/colors';
+@import '../../scss/partials/mixins';
+@import '../../scss/partials/bigButton';
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(white, 0.05);
+  z-index: 9998;
+
+  &--full {
+    @extend .modal;
+    background: rgb(32, 32, 48);
+    background: linear-gradient(0deg, rgba(32, 32, 48, 1) 0%, rgba(43, 43, 64, 1) 100%);
+    min-height: 100%;
+    z-index: 5;
+
+  }
+}
+
+.account__form {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64rem;
+  height: auto;
+  background: $dark;
+  border: 1px solid $highlight;
+  border-radius: 1.5rem;
+  z-index: 9999;
+
+  &--signup {
+    @extend .account__form;
+  }
+
+  &--login {
+    @extend .account__form;
+  }
+
+  .form__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30rem;
+    height: 100%;
+    padding: 2rem 0;
+  }
+
+  .form__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .form__input-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 5.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .form__label {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: 0.1s ease-in-out all;
+    top: 3.25rem;
+  }
+
+  .form__input {
+    width: 100%;
+    background: none;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid $highlight;
+    color: white;
+    font-size: 1.3rem;
+    outline: none;
+  }
+
+  // Move label on input focus
+  input:focus~.form__label,
+  input:not(:focus):valid~.form__label {
+    font-size: 1rem;
+    opacity: 1;
+    transform: translate(0, -1.8rem);
+  }
+
+  .form__error {
+    visibility: show;
+    color: $error;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 2rem;
+
+    &--hidden {
+      @extend .form__error;
+      visibility: hidden;
+    }
+  }
+
+  .form__subtext {
+    font-size: 1rem;
+
+    &--fp {
+      @extend .form__subtext;
+      margin-left: auto;
+      margin-bottom: auto;
+      cursor: pointer;
+    }
+  }
+
+  .form__link {
+    font-size: 1rem;
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+.terms-label {
+  font-size: 1.3rem;
+  padding-left: 7px
+}
+.account__form--signup .form__input-wrap {
+  display: inline
+}
