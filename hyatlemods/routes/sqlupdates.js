@@ -6,7 +6,7 @@ var sql = require('../sql/db.js');
 var router = express.Router();
 
 //import Recaptcha from 'express-recaptcha'
-var recaptcha = new Recaptcha('6LdglZwUAAAAANHbFpxASnT2DSeNNlxXKThOx4ew', '6LdglZwUAAAAACoHaC6zJc6PddfilAbn0UYtvm7f');
+var recaptcha = new Recaptcha('', '');
 
 const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

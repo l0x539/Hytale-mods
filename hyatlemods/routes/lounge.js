@@ -8,7 +8,7 @@ var passwordHash = require('password-hash');
 var router = express.Router();
 
 //import Recaptcha from 'express-recaptcha'
-var recaptcha = new Recaptcha('6LdglZwUAAAAANHbFpxASnT2DSeNNlxXKThOx4ew', '6LdglZwUAAAAACoHaC6zJc6PddfilAbn0UYtvm7f');
+var recaptcha = new Recaptcha('', '');
 
 
 router.post('/create/image', upload.single('mod_image'), async function (req, res) {
